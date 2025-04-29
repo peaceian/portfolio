@@ -1,0 +1,228 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/icon" href="./images/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        [lang="zh-TW"], .intro h2, .intro p, .portfolio-item h3, header h1, header p, footer p {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        header {
+            background-color: #1a202c;
+            color: #ffffff;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .intro {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .intro h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #1a202c;
+        }
+        .intro p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #4a5568;
+            max-width: 600px;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 40px 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .portfolio-item {
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .portfolio-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .portfolio-item h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: #ffffff;
+            padding: 20px 16px 12px;
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-item:hover h3 {
+            opacity: 1;
+        }
+        footer {
+            background-color: #1a202c;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .portfolio {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .portfolio-item img {
+                height: 200px;
+            }
+            .intro img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 1.75rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .intro h2 {
+                font-size: 1.5rem;
+            }
+            .intro p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的作品集</h1>
+        <p>探索我的創意與技術成果</p>
+    </header>
+
+    <section class="intro">
+        <img src="https://via.placeholder.com/150?text=Profile" alt="個人頭像">
+        <h2>關於我</h2>
+        <p>你好！我是熱衷於創意與技術的設計師與開發者，專注於打造令人驚嘆的網頁，致力於將輕鬆創意與功能完美結合。歡迎探索我的作品集!</p>
+    </section>
+
+    <section class="portfolio">
+        <div class="portfolio-item">
+            <a href="https://shopfrontend-d0ii.onrender.com/" target="_blank">
+                <img src="./images/shopfrontend.png" alt="作品1 - 電商購物網站">
+                <h3>E-commerce</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://rotwr.onrender.com/" target="_blank">
+                <img src="./images/weatherapp.jpg" alt="作品3 - 天氣預報">
+                <h3>Weather report</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://homelessanimal.onrender.com/" target="_blank">
+                <img src="./images/homelessanimal.png" alt="作品4 - 流浪動物">
+                <h3>Homeless animal</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://peaceian.github.io/todolist/" target="_blank">
+                <img src="./images/todolist.png" alt="作品2 - 代辦清單">
+                <h3>Todolist</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://peaceian.github.io/mahjongpointcount/" target="_blank">
+                <img src="./images/mahjong.png" alt="作品5 - 表格練習">
+                <h3>Table project--mahjong counter (Taiwan ver.)</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://peaceian.github.io/activenavlink/" target="_blank">
+                <img src="./images/landingpage.png" alt="作品6 - 一頁式網站">
+                <h3>Landing page</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://peaceian.github.io/calcurator/cal.html" target="_blank">
+                <img src="./images/calcurator.png" alt="作品7 - 計算機">
+                <h3>Calcurator</h3>
+            </a>
+        </div>
+        <div class="portfolio-item">
+            <a href="https://sunstarcarton.com/" target="_blank">
+                <img src="./images/sunstar.png" alt="作品9 - 廠家合作">
+                <h3>SunStar Enterprise</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Peaceian ©2025 All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
